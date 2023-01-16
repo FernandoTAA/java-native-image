@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'org.graalvm.buildtools.native' version "0.9.0"
+}
+
+group 'com.github.fernandotaa.javanativeimage'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+test {
+}
+
+nativeBuild {
+    imageName = "gradle-project"
+    mainClass = "com.github.fernandotaa.javanativeimage.usinggradle.Main"
+    verbose = true
+    fallback = false
+}
